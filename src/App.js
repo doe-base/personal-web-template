@@ -1,6 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import {createTheme, ThemeProvider } from "@mui/material"
-import { purple } from '@mui/material/colors'
 import Layout from './components/Layout'
 
 const theme = createTheme({

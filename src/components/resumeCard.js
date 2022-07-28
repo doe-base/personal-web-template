@@ -45,15 +45,14 @@ const useStyles = makeStyles((theme)=>{
 })
 
 export default function ResumeCard(){
-
     const classes = useStyles()
 
     return(
         <div className={classes.card}>
-            <Typography variant="p" className={classes.date}><CalendarMonthOutlinedIcon fontSize="10px"/> April 2020 - December 2023</Typography>
+            <Typography variant="body2" className={classes.date}><CalendarMonthOutlinedIcon fontSize="10px"/> April 2020 - December 2023</Typography>
             <Typography variant="h5" className={classes.title}>Masters in Civil Law</Typography>
-            <Typography variant="p" className={classes.text}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</Typography>
-            <Typography variant="p" className={classes.industry}>University of London</Typography>
+            <Typography variant="body2" className={classes.text}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</Typography>
+            <Typography variant="body2" className={classes.industry}>University of London</Typography>
         </div>
     )
 } 

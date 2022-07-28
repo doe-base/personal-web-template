@@ -18,11 +18,11 @@ const useStyles = makeStyles((theme) =>{
           }
     }
 }) 
-export default function ServiceComponent(){
+export default function ServiceComponent({ servicesRef }){
     const classes = useStyles()
 
     return(
-        <section className="section">
+        <section className="section" id="services" ref={servicesRef}>
             <Typography variant="h4" className={classes.title}>
                 My <strong>Services</strong>
               </Typography>

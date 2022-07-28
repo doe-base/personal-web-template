@@ -1,6 +1,5 @@
 import { makeStyles } from "@mui/styles";
 import { Grid, Typography, Button } from "@mui/material";
-import DeleteIcon from "@mui/icons-material/Delete";
 import DownloadIcon from "@mui/icons-material/Download";
 import PhoneIcon from "@mui/icons-material/Phone";
 
@@ -26,11 +25,7 @@ const useStyles = makeStyles((theme) => {
           width: "90% !important",
         },
       },
-      aboutTextHolder: {
-        padding: '2rem !important',
-
-       
-      },
+  
       aboutMe: {
         paddingBottom: "3rem",
 
@@ -95,11 +90,11 @@ const useStyles = makeStyles((theme) => {
     };
   });
 
-export default function AboutComponent(){
+export default function AboutComponent({ aboutRef }){
     const classes = useStyles();
 
     return(
-        <section className="section">
+        <section className="section" id='about' ref={aboutRef}>
           <Grid container className={classes.aboutGrid}>
             <Grid item md={6} className={classes.aboutImgHolder}>
               <img src="/pic.webp" alt="me" className={classes.aboutImg} />

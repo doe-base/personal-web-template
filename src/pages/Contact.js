@@ -60,7 +60,6 @@ const useStyles = makeStyles((theme) => {
         maxWidth: "150px !important"
     },
     contact: {
-      paddingTop: "3rem !important",
 
       [theme.breakpoints.down("sm")]: {
         padding: "1.5rem !important",
@@ -78,11 +77,11 @@ const useStyles = makeStyles((theme) => {
   };
 });
 
-export default function Contact() {
+export default function Contact({ contactRef }) {
   const classes = useStyles();
 
   return (
-    <section className="section">
+    <section className="section" id="contact" ref={contactRef}>
       <Typography variant="h4" className={classes.title}>
         Get <strong>In Touch</strong>
       </Typography>
@@ -136,7 +135,7 @@ export default function Contact() {
             </Button>
           </form>
         </Grid>
-        <Grid item xs={12} sm={4} className={classes.textField}>
+        <Grid item xs={10} sm={4} className={classes.textField}>
           <Typography variant="h4" className={classes.subtitle}>
             Contact Infomation
           </Typography>

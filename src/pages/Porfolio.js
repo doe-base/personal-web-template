@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { makeStyles } from "@mui/styles";
-import { Typography, Button, Image } from "@mui/material";
+import { Typography, Button } from "@mui/material";
 import Porfolio from "../components/portfolioCard";
 import porfolioJsonData from "../data/porfolioData.json";
 import { motion } from "framer-motion/dist/framer-motion";
@@ -23,13 +23,17 @@ const useStyles = makeStyles((theme) => {
 
       [theme.breakpoints.down("xs")]: {
         fontSize: "1.4rem !important",
-        paddingTop: "0px !important",
-        paddingBottom: "0rem !important",
       },
     },
     button: {
       margin: "0 0.2rem !important",
       fontWeight: "100 !important",
+      
+      [theme.breakpoints.down("sm")]: {
+        margin: "0 0rem !important",
+
+        minWidth: "0rem !important",
+      },
     },
     cardGrid: {
       paddingTop: "2rem",
@@ -46,10 +50,13 @@ const useStyles = makeStyles((theme) => {
         gap: "0.8rem",
       },
     },
+    filterBtnContainer: {
+      width: "100%",
+    }
     
   };
 });
-export default function PorfolioComponent() {
+export default function PorfolioComponent({ porfolioRef }) {
   const [porfolioData, setPorfolioData] = useState(porfolioJsonData);
   const classes = useStyles();
 
@@ -67,13 +74,13 @@ export default function PorfolioComponent() {
   }
 
   return (
-    <section className="section profile-section">
+    <section className="section profile-section" id="porfolio" ref={porfolioRef}>
       <Typography variant="h4" className={classes.title}>
         My <strong>Designes</strong>
       </Typography>
 
       {/* Porfolio Filter Buttons */}
-      <div className="filter-btn-container" style={{ marginBottom: "30px" }}>
+      <div className={classes.filterBtnContainer} style={{ marginBottom: "30px" }}>
         {porfolioArr.map((item, index) => {
           return (
             <Button

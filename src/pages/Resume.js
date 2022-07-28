@@ -28,22 +28,31 @@ const useStyles = makeStyles((theme) => {
     },
     resumeItem: {
       padding: "0px 15px 15px 0px !important",
+
+      [theme.breakpoints.down("sm")]: {
+        padding: "0px 0px 0px 0px !important",
+        marginTop: "1.2rem !important",
+      },
     },
     subTitle: {
       marginBottom: "3rem!important",
       fontSize: "25px !important",
       color: "white",
       fontWeight: "200",
-      textAlign: "left !important"
+      textAlign: "left !important",
+
+      [theme.breakpoints.down("sm")]: {
+        marginBottom: "1.2rem !important",
+      },
     },
   };
 });
 
-export default function ResumeComponent() {
+export default function ResumeComponent({ resumeRef }) {
   const classes = useStyles();
 
   return (
-    <section className="section">
+    <section className="section" id="resume" ref={resumeRef}>
       <Typography variant="h4" className={classes.title}>
         My <strong>Resume</strong>
       </Typography>

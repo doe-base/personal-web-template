@@ -1,6 +1,5 @@
 import { Typography, Button, Grid } from "@mui/material";
 import React from "react";
-import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme)=>{
@@ -58,8 +57,7 @@ const useStyles = makeStyles((theme)=>{
             color: "#bac964 !important",
             marginBottom: '0.5rem !important', 
         },
-        flexHolder: {
-            paddingTop: '3rem !important',  
+        flexHolder: {  
 
             [theme.breakpoints.down("lg")]: {
                 width: '85% !important',
@@ -81,7 +79,7 @@ export default function ServiceCard(){
 
             <Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
                 <div className={classes.card}>
-                    <div className={classes.svg}><img src="/design-svg.svg" className={classes.icon} /></div>
+                    <div className={classes.svg}><img src="/design-svg.svg" className={classes.icon} alt="icon" /></div>
                     <Typography variant="h5" className={classes.mainText}>Design</Typography>
                     <Typography variant="body1" className={classes.textP}>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</Typography>
                     <Button className={classes.btn}>Learn More</Button>
@@ -89,7 +87,7 @@ export default function ServiceCard(){
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
                 <div className={classes.card}>
-                    <div className={classes.svg}><img src="/clothe-svg.svg" className={classes.icon} /></div>
+                    <div className={classes.svg}><img src="/clothe-svg.svg" className={classes.icon} alt="icon" /></div>
                     <Typography variant="h5" className={classes.mainText}>Tailoring</Typography>
                     <Typography variant="body1" className={classes.textP}>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</Typography>
                     <Button className={classes.btn}>Learn More</Button>
@@ -97,7 +95,7 @@ export default function ServiceCard(){
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
                 <div className={classes.card}>
-                    <div className={classes.svg}><img src="/marketing-svg.svg" className={classes.icon} /></div>
+                    <div className={classes.svg}><img src="/marketing-svg.svg" className={classes.icon} alt="icon"/></div>
                     <Typography variant="h5" className={classes.mainText}>Markerting</Typography>
                     <Typography variant="body1" className={classes.textP}>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</Typography>
                     <Button className={classes.btn}>Learn More</Button>

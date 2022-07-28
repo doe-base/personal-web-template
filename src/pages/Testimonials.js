@@ -27,7 +27,7 @@ export default function Testimonials(){
                 Clinets <strong>Testimonials</strong>
               </Typography>
 
-                <Grid container className="pt-4">
+                <Grid container>
                     <Grid item md={6}><TestimonialCard /></Grid>
                     <Grid item md={6}><TestimonialCard /></Grid>
                     <Grid item md={6}><TestimonialCard /></Grid>
