@@ -3,6 +3,8 @@ import { makeStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
 import ServiceCard from "../components/serviceCard";
 
+
+
 const useStyles = makeStyles((theme) =>{
     return{
         title: {
@@ -20,6 +22,7 @@ const useStyles = makeStyles((theme) =>{
 }) 
 export default function ServiceComponent({ servicesRef }){
     const classes = useStyles()
+
 
     return(
         <section className="section" id="services" ref={servicesRef}>

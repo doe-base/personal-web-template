@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import React from "react";
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import { makeStyles } from "@mui/styles";
+import "aos/dist/aos.css"
 
 const useStyles = makeStyles((theme)=>{
     return {
@@ -31,6 +32,7 @@ const useStyles = makeStyles((theme)=>{
             display: 'block',
             fontSize: '15px !important',
             color: 'rgba(255,255,255,.2)',
+            textTransform: 'uppercase',
         },
         card: {
             padding: 30,
@@ -44,15 +46,15 @@ const useStyles = makeStyles((theme)=>{
     }
 })
 
-export default function ResumeCard(){
+export default function ResumeCard({ item, place }){
     const classes = useStyles()
 
     return(
-        <div className={classes.card}>
+        <div className={classes.card} data-aos="fade-up" data-aos-once="true">
             <Typography variant="body2" className={classes.date}><CalendarMonthOutlinedIcon fontSize="10px"/> April 2020 - December 2023</Typography>
-            <Typography variant="h5" className={classes.title}>Masters in Civil Law</Typography>
+            <Typography variant="h5" className={classes.title}>{item}</Typography>
             <Typography variant="body2" className={classes.text}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</Typography>
-            <Typography variant="body2" className={classes.industry}>University of London</Typography>
+            <Typography variant="body2" className={classes.industry}>{place}</Typography>
         </div>
     )
 } 

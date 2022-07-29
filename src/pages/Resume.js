@@ -51,6 +51,11 @@ const useStyles = makeStyles((theme) => {
 export default function ResumeComponent({ resumeRef }) {
   const classes = useStyles();
 
+  const school = "Masters in Civil Law"
+  const schoolPlace = "university of london"
+  const work = "Fashion Design Expert"
+  const workPlace = "Puma HQ Germany"
+
   return (
     <section className="section" id="resume" ref={resumeRef}>
       <Typography variant="h4" className={classes.title}>
@@ -63,18 +68,18 @@ export default function ResumeComponent({ resumeRef }) {
             Education
           </Typography>
 
-          <ResumeCard />
-          <ResumeCard />
-          <ResumeCard />
+          <ResumeCard item={school} place={schoolPlace}/>
+          <ResumeCard item={school} place={schoolPlace}/>
+          <ResumeCard item={school} place={schoolPlace}/>
         </div>
         <div className={classes.resumeItem}>
           <Typography variant="h3" className={classes.subTitle}>
             Experience
           </Typography>
 
-          <ResumeCard />
-          <ResumeCard />
-          <ResumeCard />
+          <ResumeCard item={work} place={workPlace}/>
+          <ResumeCard item={work} place={workPlace}/>
+          <ResumeCard item={work} place={workPlace}/>
         </div>
       </div>
     </section>

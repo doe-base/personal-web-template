@@ -3,6 +3,8 @@ import { makeStyles } from "@mui/styles";
 import { Typography, Avatar } from "@mui/material";
 import SignalCellular4BarIcon from '@mui/icons-material/SignalCellular4Bar';
 
+import "aos/dist/aos.css"
+
 const useStyles = makeStyles((theme) => {
   return {
     title: {
@@ -65,12 +67,12 @@ const useStyles = makeStyles((theme) => {
     }
   };
 });
-export default function TestimonialCard() {
+export default function TestimonialCard({image}) {
   const classes = useStyles();
 
   return (
-    <div className={classes.card}>
-      <Avatar src="/avater.jpg" className={classes.avatar} sx={{ width: 56, height: 56 }} />
+    <div className={classes.card} data-aos="fade-up" data-aos-once="true">
+      <Avatar src={`/person${image}.webp`} className={classes.avatar} sx={{ width: 56, height: 56 }} />
 
       <div className={classes.cardTextHolder}>
         <SignalCellular4BarIcon className={classes.quote} />  

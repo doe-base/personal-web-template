@@ -117,3 +117,7 @@ form{
 #about{
   padding-top: 7rem !important;
 }
+
+a{
+  text-decoration: none !important;
+}

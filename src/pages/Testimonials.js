@@ -21,6 +21,11 @@ const useStyles = makeStyles((theme) =>{
 export default function Testimonials(){
     const classes = useStyles()
 
+    const image1 = 1
+    const image2 = 2
+    const image3 = 3
+    const image4 = 4
+
     return(
         <section className="section">
             <Typography variant="h4" className={classes.title}>
@@ -28,10 +33,10 @@ export default function Testimonials(){
               </Typography>
 
                 <Grid container>
-                    <Grid item md={6}><TestimonialCard /></Grid>
-                    <Grid item md={6}><TestimonialCard /></Grid>
-                    <Grid item md={6}><TestimonialCard /></Grid>
-                    <Grid item md={6}><TestimonialCard /></Grid>
+                    <Grid item md={6}><TestimonialCard image={image1}/></Grid>
+                    <Grid item md={6}><TestimonialCard image={image2}/></Grid>
+                    <Grid item md={6}><TestimonialCard image={image3}/></Grid>
+                    <Grid item md={6}><TestimonialCard image={image4}/></Grid>
                 </Grid>
 
         </section>

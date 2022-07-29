@@ -10,6 +10,9 @@ import Contact from "../pages/Contact";
 import NavBar from "./NavBar";
 import Home from "@mui/icons-material/Home";
 
+import Aos from "aos";
+import "aos/dist/aos.css"
+
 // Material Ui
 const useStyles = makeStyles((theme) => {
   return {
@@ -65,6 +68,7 @@ const useStyles = makeStyles((theme) => {
       fontSize: "26px",
       margin: "5px 10px",
       color: "#bac964 !important",
+      cursor: "pointer",
     },
     a: {
       color: "#bac964 !important",
@@ -86,6 +90,11 @@ const useStyles = makeStyles((theme) => {
       right: "2rem !important",
       cursor: "pointer",
       zIndex: "999999999",
+
+      [theme.breakpoints.down("sm")]: {
+        bottom: "1rem !important",
+        right: "1rem !important",
+      },
     },
   };
 });
@@ -151,6 +160,9 @@ export default function Layout({ children }) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+  useEffect(()=>{
+    Aos.init({ duration: 500})
+  }, [])
 
 
 
@@ -160,14 +172,14 @@ export default function Layout({ children }) {
         <div className="hero-overlay">
           <NavBar isActive={isActive} />
           <div className="hero-content">
-            <Grid container className="hero-text-holder">
-              <Grid item>
-                <Typography variant="h1" className={classes.h1Span}>
+            <Grid container className="hero-text-holder" data-aos="fade-up">
+              <Grid item xs={11}>
+                <Typography variant="h1" className={classes.h1Span} >
                   <span>Hello, I'm</span> <br />
                   <strong>Isah Ibrahim Abu</strong>
                 </Typography>
                 <Typography variant="body1" className={classes.pprofession}>
-                  And am a Fashion Designer from the Irak
+                  And am a Fashion Designer from the Egypt
                 </Typography>
               </Grid>
             </Grid>
@@ -203,19 +215,19 @@ export default function Layout({ children }) {
               </a>
             </Typography>
             <div className={classes.socialIcons}>
-              <div className={classes.socialIcon}>
+              <div className={classes.socialIcon} data-aos="fade-up" data-aos-once="true" data-aos-delay="">
                 <i className="fa fa-facebook" aria-hidden="true"></i>
               </div>
-              <div className={classes.socialIcon}>
+              <div className={classes.socialIcon} data-aos="fade-up" data-aos-once="true" data-aos-delay="50">
                 <i className="fa fa-instagram" aria-hidden="true"></i>
               </div>
-              <div className={classes.socialIcon}>
+              <div className={classes.socialIcon} data-aos="fade-up" data-aos-once="true" data-aos-delay="100">
                 <i className="fa fa-twitter" aria-hidden="true"></i>
               </div>
-              <div className={classes.socialIcon}>
+              <div className={classes.socialIcon} data-aos="fade-up" data-aos-once="true" data-aos-delay="150">
                 <i className="fa fa-linkedin" aria-hidden="true"></i>
               </div>
-              <div className={classes.socialIcon}>
+              <div className={classes.socialIcon} data-aos="fade-up" data-aos-once="true" data-aos-delay="200">
                 <i className="fa fa-reddit-alien" aria-hidden="true"></i>
               </div>
             </div>

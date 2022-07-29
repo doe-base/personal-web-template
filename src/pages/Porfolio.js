@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 import { Typography, Button } from "@mui/material";
 import Porfolio from "../components/portfolioCard";
 import porfolioJsonData from "../data/porfolioData.json";
-import { motion } from "framer-motion/dist/framer-motion";
+import { SRLWrapper } from "simple-react-lightbox";
 
 
 // Creating and Array of porfolio category
@@ -76,7 +76,7 @@ export default function PorfolioComponent({ porfolioRef }) {
   return (
     <section className="section profile-section" id="porfolio" ref={porfolioRef}>
       <Typography variant="h4" className={classes.title}>
-        My <strong>Designes</strong>
+        My <strong>Designs</strong>
       </Typography>
 
       {/* Porfolio Filter Buttons */}
@@ -95,11 +95,13 @@ export default function PorfolioComponent({ porfolioRef }) {
         })}
       </div>
 
-      <motion.div layout className={classes.cardGrid}>
-        {porfolioData.map((item, index) => {
-          return <Porfolio item={item} key={index} />;
-        })}
-      </motion.div>
+      <SRLWrapper >
+        <div className={classes.cardGrid}>
+          {porfolioData.map((item, index) => {
+            return <Porfolio item={item} key={index} />;
+          })}
+        </div>
+      </SRLWrapper>
     </section>
   );
 }

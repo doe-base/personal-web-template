@@ -1,6 +1,10 @@
 import { Typography, Button, Grid } from "@mui/material";
-import React from "react";
+import React, {useEffect} from "react";
 import { makeStyles } from "@mui/styles";
+
+
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 const useStyles = makeStyles((theme)=>{
     return {
@@ -74,11 +78,12 @@ export default function ServiceCard(){
 
     const classes = useStyles()
 
+
     return(
         <Grid container className={classes.flexHolder}>
 
             <Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
-                <div className={classes.card}>
+                <div className={classes.card} data-aos="fade-up" data-aos-once="true">
                     <div className={classes.svg}><img src="/design-svg.svg" className={classes.icon} alt="icon" /></div>
                     <Typography variant="h5" className={classes.mainText}>Design</Typography>
                     <Typography variant="body1" className={classes.textP}>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</Typography>
@@ -86,7 +91,7 @@ export default function ServiceCard(){
                 </div>
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
-                <div className={classes.card}>
+                <div className={classes.card} data-aos="fade-up" data-aos-once="true">
                     <div className={classes.svg}><img src="/clothe-svg.svg" className={classes.icon} alt="icon" /></div>
                     <Typography variant="h5" className={classes.mainText}>Tailoring</Typography>
                     <Typography variant="body1" className={classes.textP}>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</Typography>
@@ -94,7 +99,7 @@ export default function ServiceCard(){
                 </div>
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
-                <div className={classes.card}>
+                <div className={classes.card} data-aos="fade-up" data-aos-once="true">
                     <div className={classes.svg}><img src="/marketing-svg.svg" className={classes.icon} alt="icon"/></div>
                     <Typography variant="h5" className={classes.mainText}>Markerting</Typography>
                     <Typography variant="body1" className={classes.textP}>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</Typography>

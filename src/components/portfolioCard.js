@@ -1,14 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { makeStyles } from '@mui/styles';
 import {
     
   } from "@mui/material"
-  import { motion } from 'framer-motion/dist/framer-motion'
+  
+  import "aos/dist/aos.css"
+  
 
 const useStyles = makeStyles((theme) => {
     return {
       card: {
         width: '100%',
+        cursor: 'pointer',
       },
       cardImage: {
         width: '100%',
@@ -68,17 +71,20 @@ const useStyles = makeStyles((theme) => {
     };
   });
   
+  
 
 export default function Porfolio({item}){
 
     const classes = useStyles()
 
+
     return(
-     
-        <motion.div layout className={classes.card}>
-          <img src={item.img} alt="clothe" className={classes.cardImage}/>
+     <a>
+        <div layout data-aos="fade-up" data-aos-once="true" className={classes.card}>
+          <img src={item.img} alt="design" className={classes.cardImage}/>
           <h5 className={classes.cardH5}>{item.name}</h5>
           <p className={classes.cardP}>{item.category}</p>
-        </motion.div> 
+        </div> 
+     </a>
     )
 }

@@ -3,6 +3,8 @@ import { Grid, Typography, Button } from "@mui/material";
 import DownloadIcon from "@mui/icons-material/Download";
 import PhoneIcon from "@mui/icons-material/Phone";
 
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 const useStyles = makeStyles((theme) => {
     return {
@@ -86,6 +88,9 @@ const useStyles = makeStyles((theme) => {
       btn: {
         margin: "0.2rem !important",
         letterSpacing: '1px !important'
+      },
+      btnLink: {
+        textDecoration: 'none !important',
       }
     };
   });
@@ -95,7 +100,7 @@ export default function AboutComponent({ aboutRef }){
 
     return(
         <section className="section" id='about' ref={aboutRef}>
-          <Grid container className={classes.aboutGrid}>
+          <Grid container className={classes.aboutGrid} data-aos="fade-up" data-aos-once="true">
             <Grid item md={6} className={classes.aboutImgHolder}>
               <img src="/pic.webp" alt="me" className={classes.aboutImg} />
             </Grid>
@@ -114,9 +119,11 @@ export default function AboutComponent({ aboutRef }){
                 A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth
                 </Typography>
 
-                <Button variant="outlined" startIcon={<PhoneIcon />} className={classes.btn}>
-                    Hire Me
-                </Button>
+                <a href="#contact" className={classes.btnLink}>
+                  <Button variant="outlined" startIcon={<PhoneIcon />} className={classes.btn}>
+                      Hire Me
+                  </Button>
+                </a>
                 <Button variant="contained" color="secondary" endIcon={<DownloadIcon />} className={classes.btn}>
                     Download CV
                 </Button>
