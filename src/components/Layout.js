@@ -210,7 +210,7 @@ export default function Layout({ children }) {
           <div className={classes.footer}>
             <Typography variant="body1">
               Copyright © 2022 All rights reserved | This template is made by{" "}
-              <a href="#" className={classes.a}>
+              <a href="https://twitter.com/IG73975370" target="_blank" className={classes.a}>
                 Daniel IDG
               </a>
             </Typography>
